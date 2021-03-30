@@ -92,6 +92,7 @@ header {
 	height: 90px;
 	display: flex;
 	justify-content: center;
+	z-index: 1000;
 }
 
 .header {
@@ -106,9 +107,9 @@ header {
 		display: flex;
 		.header-navigation-item {
 			line-height: 20px;
-			padding: 10px 20px;
-			border-radius: 50px;
 			a {
+				border-radius: 50px;
+				padding: 10px 20px;
 				text-decoration: none;
 			}
 		};
@@ -119,16 +120,15 @@ header {
 	}
 }
 
-.header-navigation-item a {
+.main-links-item {
 	color:#676767
 }
 
 .active {
 	background-color: #3C6EB9;
-	a {
-		color: #fff;
-	}
+	color: #fff;
 }
+
 
 .registration {
 	display: flex;
@@ -168,7 +168,7 @@ header {
 	}
 }
 
-.registration-form::placeholder{
+.registration-form input::placeholder{
 	color:#787878
 }
 
@@ -284,6 +284,10 @@ header {
 	display: flex;
 	width: $content-width;
 	justify-content: center;
+	img {
+		margin: 0 auto;
+		margin-bottom: 21px;
+	}
 }
 
 .statistics {
@@ -399,6 +403,7 @@ header {
 .video-container {
 	margin: 60px auto;
 	width: $content-width;
+	min-height: 650px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -429,7 +434,12 @@ header {
 }
 
 .mentors-slider-item {
-	display: flex;
+	.mentors-item-left {
+		float: left;
+	}
+	.mentors-item-right {
+		float:right;
+	}
 	width: 1120px;
 	margin: 0 auto;
 	.mentors-text {
@@ -524,3 +534,54 @@ header {
 	margin-top: -90px;
 	height: 90px;
 }
+
+.feedbacks-slider {
+
+}
+
+.feedbacks-slider .slick-dots {
+	position: relative;
+	top: 100px;
+	li{
+		button {
+			width: 16px;
+			height: 16px;
+		}
+		button::before{
+			
+			font-size: 16px;
+		}
+	}
+}
+.mentors-slider-container .slick-dots {
+	bottom: -35px;
+	li{
+		button {
+			width: 16px;
+			height: 16px;
+		}
+		button::before{
+			
+			font-size: 16px;
+		}
+	}
+}
+
+.course-slider-container .slick-dots {
+	bottom: -35px;
+	li{
+		button {
+			width: 16px;
+			height: 16px;
+		}
+		button::before{
+			
+			font-size: 16px;
+		}
+	}
+}
+
+.slick-slide {
+	outline: none;
+}
+
