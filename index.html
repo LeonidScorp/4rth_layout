@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
+    <base href="">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -19,12 +19,12 @@
             <div class="filler"></div>
             <nav class="header-menu">
                 <ul class="header-navigation">
-                    <li class="header-navigation-item "><a href="#home" class="main-links-item">Головна</a></li>
+                    <li class="header-navigation-item "><a href="#home" class="main-links-item ">Головна</a></li>
                     <li class="header-navigation-item"><a href="#course" class="main-links-item">Програма курсу</a></li>
                     <li class="header-navigation-item"><a href="#feedbacks" class="main-links-item">Відгуки про курс</a></li>
                     <li class="header-navigation-item"><a href="#video" class="main-links-item">Відео</a></li>
                     <li class="header-navigation-item"><a href="#mentors" class="main-links-item">Ментори</a></li>
-                    <li class="header-navigation-item"><a href="#registration" class="main-links-item">Подати заявку</a></li>
+                    <li class="header-navigation-item"><a href="#registration" class="main-links-item active">Подати заявку</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,13 +44,13 @@
             <div class="registration-form">
                 <form action="">
                     <h3>Зареєструватися на курси</h3>
-                    <label for="name">Ім'я <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="name" placeholder="Ім'я">
-                    <label for="surname">Прізвище <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="surname" placeholder="Прізвище">
-                    <label for="interest">Мене більше цікавить <img src="images/icons/required.png" alt="required"></label><input class="input" type="text" name="interest" placeholder="developer or QA">
-                    <label for="phone">Номер телефону <img src="images/icons/required.png" alt="required"></label><input class="input" type="text" name="phone" placeholder="Номер телефону +38 XXX XX XX XXX">
-                    <label for="email">Email <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="email" placeholder="Email">
-                    <div class="form-terms"><input type="checkbox" name="terms"><label for="terms">Я погоджуюсь із <a href="">Політикою конфіденційності </a><img src="images/icons/required.png" alt="required"></label></div>
-                    <button type="submit">Зареєеструватися зараз</button>
+                    <label for="name">Ім'я <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="name" placeholder="Ім'я" id="name">
+                    <label for="surname">Прізвище <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="surname" placeholder="Прізвище" id="surname">
+                    <label for="interest">Мене більше цікавить <img src="images/icons/required.png" alt="required"></label><input class="input" type="text" name="interest" placeholder="developer or QA" id="interest">
+                    <label for="phone">Номер телефону <img src="images/icons/required.png" alt="required"></label><input class="input" type="text" name="phone" placeholder="Номер телефону +38 XXX XX XX XXX" id="phone">
+                    <label for="email">Email <img src="images/icons/required.png" alt="required"></label><input type="text" class="input" name="email" placeholder="Email" id="email">
+                    <div class="form-terms"><input type="checkbox" name="terms" id="terms"><label for="terms">Я погоджуюсь із <a href="">Політикою конфіденційності </a><img src="images/icons/required.png" alt="required"><span></span></label></div>
+                    <button type="submit" class="submit">Зареєеструватися зараз</button>
                 </form>
             </div>
         </div>
@@ -80,13 +80,20 @@
                     Ти дізнаєшся про забезпечення якості в контексті різних моделей розробки ПЭ Також QAcriеціаліст розкаже про види тестування (функціональне, регресивне, системне тестування швидкодії тощо).
                 </p>
             </div>
+            <!-- <div class="course-slider-item">
+                <img src="images/icons/course-icon-2.png" alt="slider-logo" class="slider-item-logo">
+                <h3 class="slider-item-title">Розробка сайтів на Drupal 8</h3>
+                <p class="slider-item-text">
+                    Для створенні чудових сайтів на Drupal 8, цеглинка з цеглинкою, то пізнаеші секрети основних та додаткових Drupal модулів Views, Rules, Panels. Devel Paragraph та багатьох інших).
+                </p>
+            </div>
             <div class="course-slider-item">
                 <img src="images/icons/course-icon-3.png" alt="slider-logo" class="slider-item-logo">
                 <h3 class="slider-item-title">Ознайомлення з тестуванням</h3>
                 <p class="slider-item-text">
                     Ти дізнаєшся про забезпечення якості в контексті різних моделей розробки ПЭ Також QAcriеціаліст розкаже про види тестування (функціональне, регресивне, системне тестування швидкодії тощо).
                 </p>
-            </div>
+            </div> -->
         </div>
     </section>
     <div class="statistics">
@@ -224,7 +231,7 @@
         </div>
     </section>
     <div class="map-block">
-        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1786.3691888909766!2d25.317194490954343!3d50.71423350699397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1suk!2sua!4v1617008813058!5m2!1suk!2sua"  height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1786.3691888909766!2d25.317194490954343!3d50.71423350699397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1suk!2sua!4v1617008813058!5m2!1suk!2sua"  height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="social-links">
         <div class="social-links-container">
