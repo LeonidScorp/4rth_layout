@@ -4,7 +4,6 @@ $(document).ready(function (){
     if (coursesChildren < 4) {
         $(".course-slider-container").removeClass("course-slider");
         $(".course-slider-container .slick-dots").hide();
-        
     } else coursesChildren = 3;
     $('.course-slider').slick({
         dots: true,
@@ -14,10 +13,10 @@ $(document).ready(function (){
         slidesToScroll: 2
         // responsive: [
         //     {
-        //     breakpoint: 1024,
+        //     breakpoint: 1219,
         //     settings: {
-        //         slidesToShow: 3,
-        //         slidesToScroll: 3,
+        //         slidesToShow: 2,
+        //         slidesToScroll: 1,
         //         infinite: true,
         //         dots: true
         //     }
@@ -41,6 +40,12 @@ $(document).ready(function (){
         //     // instead of a settings object
         // ]
     }); 
+});
+
+$(window).resize(function () {
+    if (($(window).width() < 1220)) {
+        $(".course-slider-container .slick-dots").show();
+    }
 });
 
 var sections = $('section'), nav = $('.header-navigation'), nav_height = $('header').outerHeight();
