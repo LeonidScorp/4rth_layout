@@ -1,50 +1,50 @@
 var coursesChildren = $(".course-slider-container").children().length;
+var dotsVisible=true;
+if (coursesChildren < 4) {
+    dotsVisible = false;
+    if (coursesChildren < 3) {
+        // $(".course-slider-container").removeClass("course-slider");
+        $(".course-slider-container").addClass("flex-container");
+    }
+        
+} else coursesChildren = 3;
 
-$(document).ready(function (){
-    if (coursesChildren < 4) {
-        $(".course-slider-container").removeClass("course-slider");
-        $(".course-slider-container .slick-dots").hide();
-    } else coursesChildren = 3;
-    $('.course-slider').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: coursesChildren,
-        slidesToScroll: 2
-        // responsive: [
-        //     {
-        //     breakpoint: 1219,
-        //     settings: {
-        //         slidesToShow: 2,
-        //         slidesToScroll: 1,
-        //         infinite: true,
-        //         dots: true
-        //     }
-        //     },
-        //     {
-        //     breakpoint: 600,
-        //     settings: {
-        //         slidesToShow: 2,
-        //         slidesToScroll: 2
-        //     }
-        //     },
-        //     {
-        //     breakpoint: 480,
-        //     settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1
-        //     }
-        //     }
-        //     // You can unslick at a given breakpoint now by adding:
-        //     // settings: "unslick"
-        //     // instead of a settings object
-        // ]
-    }); 
-});
+$('.course-slider').slick({
+    dots: dotsVisible,
+    arrows:false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: coursesChildren,
+    slidesToScroll: 1,
+    responsive: [
+        {
+        breakpoint: 1220,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true
+        }
+        },
+        {
+        breakpoint: 850,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+        }
+        }
+        
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+}); 
 
 $(window).resize(function () {
     if (($(window).width() < 1220)) {
-        $(".course-slider-container .slick-dots").show();
+        dotsVisible = true;
+    } else {
+        if (coursesChildren < 4) dotsVisible = false;
     }
 });
 

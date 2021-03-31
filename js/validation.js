@@ -88,8 +88,6 @@ $(function() {
         if (errors == 0) {
             return true;
         }
-        
-        console.log(errors);
 
         if (errors > 0) {
             e.preventDefault();
