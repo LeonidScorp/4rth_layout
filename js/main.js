@@ -18,7 +18,7 @@ $('.course-slider').slick({
     slidesToScroll: 1,
     responsive: [
         {
-        breakpoint: 1220,
+        breakpoint: 850,
         settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -26,7 +26,7 @@ $('.course-slider').slick({
         }
         },
         {
-        breakpoint: 850,
+        breakpoint: 600,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
